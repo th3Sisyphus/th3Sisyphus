@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>John Doe — Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HERO with decorative code background -->
+    <div style="position: relative">
+      <div class="bg-field" aria-hidden="true"></div>
+      <div class="bg-glow" aria-hidden="true"></div>
+      <div class="gutter-numbers" aria-hidden="true">
+        <span>01</span><span>02</span><span>03</span><span>04</span
+        ><span>05</span><span>06</span>
+      </div>
+
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo-mark">YD</div>
+          <span class="brand-text"><b>yehez-darren</b>/portfolio</span>
+        </div>
+        <div class="topbar-right">
+          <div class="window-dots"><span></span><span></span><span></span></div>
+          <button
+            class="icon-btn"
+            id="themeToggle"
+            title="Ganti mode gelap/terang"
+            aria-label="Ganti tema"
+          >
+            <svg
+              id="themeIcon"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+            </svg>
+          </button>
+          <button
+            class="icon-btn"
+            id="navToggle"
+            title="Menu"
+            aria-label="Buka menu"
+          >
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="4" y1="7" x2="20" y2="7" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="17" x2="20" y2="17" />
+            </svg>
+            menu
+          </button>
+        </div>
+      </div>
+
+      <section class="hero" id="about">
+        <div class="hero-inner reveal in">
+          <span class="eyebrow">$ status --study-status</span>
+          <h1 class="hero-title">
+            <span class="lead">Hey, I'm</span> <span class="name">Yehezkiel Darren Putra Wardoyo</span
+            ><br />
+            <span class="lead">but you can call me</span>
+            <span class="nick">Darren<span class="cursor"></span></span>
+          </h1>
+          <p class="hero-subtitle">
+            Tulis deskripsi singkat tentang diri Anda di sini — misalnya peran
+            Anda sebagai Software Developer, area keahlian, dan apa yang membuat
+            Anda tertarik pada dunia pengembangan perangkat lunak.
+          </p>
+          <div class="hero-links">
+            <a href="#projects" class="hero-link">→ Lihat Projek Saya</a>
+            <a href="#education" class="hero-link">→ Tentang Saya</a>
+          </div>
+        </div>
+
+        <div class="scroll-hint">
+          <span>scroll</span><span class="line"></span>
+        </div>
+      </section>
+    </div>
+
+    <!-- NAV OVERLAY -->
+    <div class="nav-overlay" id="navOverlay">
+      <span class="nav-overlay-label">Explorer</span>
+      <button class="nav-overlay-close" id="navClose" aria-label="Tutup menu">
+        ✕
+      </button>
+      <ul class="nav-overlay-list">
+        <li><a href="#about" data-nav>about.md</a></li>
+        <li><a href="#education" data-nav>education.json</a></li>
+        <li><a href="#skills" data-nav>skills.json</a></li>
+        <li><a href="#projects" data-nav>projects/</a></li>
+        <li><a href="#contact" data-nav>contact.txt</a></li>
+      </ul>
+    </div>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="reveal">
+        <div class="section-tag">// riwayat studi</div>
+        <h2 class="section-title">Pendidikan</h2>
+      </div>
+      <div class="edu-grid reveal">
+        <div class="edu-card">
+          <div class="edu-year">2023 — 2027</div>
+          <div>
+            <div class="edu-school">Universitas Kristen Duta Wacana</div>
+            <div class="edu-degree">S1 Informatika</div>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year">2020 — 2023</div>
+          <div>
+            <div class="edu-school">SMA BOPKRI SATU YOGYAKARTA</div>
+            <div class="edu-degree">IPA</div>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-year">2017 — 2020</div>
+          <div>
+            <div class="edu-school">SMPK PENABUR KOTA MODERN</div>
+            <div class="edu-degree">SMP</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="reveal">
+        <div class="section-tag">// keahlian</div>
+        <h2 class="section-title">Bahasa Pemrograman</h2>
+      </div>
+      <div class="reveal">
+        <div class="skill-group">
+          <div class="skill-label">"languages"</div>
+          <div class="tag-row">
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Python</span>
+            <span class="tag">PHP</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">"frameworks"</div>
+          <div class="tag-row">
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Laravel</span>
+            <span class="tag">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">"tools"</div>
+          <div class="tag-row">
+            <span class="tag">Git</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Postman</span>
+            <span class="tag">Linux</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="reveal">
+        <div class="section-tag">// portofolio</div>
+        <h2 class="section-title">Daftar Projek</h2>
+      </div>
+      <div class="project-grid reveal">
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-title">Nama Projek Satu</div>
+            <span class="project-icon">↗</span>
+          </div>
+          <p class="project-desc">
+            Deskripsi singkat mengenai projek ini, masalah apa yang
+            diselesaikan, dan peran Anda di dalamnya.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">React</span>
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">MongoDB</span>
+          </div>
+          <a
+            href="https://github.com/username/repo-satu"
+            target="_blank"
+            rel="noopener"
+            class="project-link"
+            >github.com/username/repo-satu →</a
+          >
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-title">Nama Projek Dua</div>
+            <span class="project-icon">↗</span>
+          </div>
+          <p class="project-desc">
+            Deskripsi singkat mengenai projek ini, masalah apa yang
+            diselesaikan, dan peran Anda di dalamnya.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Next.js</span>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">PostgreSQL</span>
+          </div>
+          <a
+            href="https://github.com/username/repo-dua"
+            target="_blank"
+            rel="noopener"
+            class="project-link"
+            >github.com/username/repo-dua →</a
+          >
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-title">Nama Projek Tiga</div>
+            <span class="project-icon">↗</span>
+          </div>
+          <p class="project-desc">
+            Deskripsi singkat mengenai projek ini, masalah apa yang
+            diselesaikan, dan peran Anda di dalamnya.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">Docker</span>
+          </div>
+          <a
+            href="https://github.com/username/repo-tiga"
+            target="_blank"
+            rel="noopener"
+            class="project-link"
+            >github.com/username/repo-tiga →</a
+          >
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <div class="project-title">Nama Projek Empat</div>
+            <span class="project-icon">↗</span>
+          </div>
+          <p class="project-desc">
+            Deskripsi singkat mengenai projek ini, masalah apa yang
+            diselesaikan, dan peran Anda di dalamnya.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Laravel</span>
+            <span class="project-tag">MySQL</span>
+            <span class="project-tag">Tailwind</span>
+          </div>
+          <a
+            href="https://github.com/username/repo-empat"
+            target="_blank"
+            rel="noopener"
+            class="project-link"
+            >github.com/username/repo-empat →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="reveal">
+        <div class="section-tag">// hubungi saya</div>
+        <h2 class="section-title">Mari Terhubung</h2>
+      </div>
+      <div class="contact-grid reveal">
+        <a
+          href="https://github.com/username"
+          target="_blank"
+          rel="noopener"
+          class="contact-card"
+        >
+          <span class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.98 3.23 9.2 7.71 10.69.56.1.77-.24.77-.54 0-.27-.01-1.15-.02-2.09-3.14.68-3.8-1.35-3.8-1.35-.51-1.31-1.25-1.66-1.25-1.66-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.4-1.22.72-1.5-2.51-.29-5.14-1.25-5.14-5.59 0-1.24.44-2.24 1.16-3.03-.12-.29-.5-1.45.11-3.02 0 0 .95-.3 3.11 1.16a10.8 10.8 0 0 1 5.66 0c2.16-1.46 3.11-1.16 3.11-1.16.61 1.57.23 2.73.11 3.02.72.79 1.16 1.79 1.16 3.03 0 4.35-2.63 5.3-5.14 5.58.41.35.77 1.04.77 2.11 0 1.52-.01 2.75-.01 3.12 0 .3.2.65.78.54A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"
+              />
+            </svg>
+          </span>
+          <div>
+            <div class="contact-key">github</div>
+            <div class="contact-value">github.com/username</div>
+          </div>
+        </a>
+
+        <a
+          href="https://linkedin.com/in/username"
+          target="_blank"
+          rel="noopener"
+          class="contact-card"
+        >
+          <span class="contact-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"
+              />
+            </svg>
+          </span>
+          <div>
+            <div class="contact-key">linkedin</div>
+            <div class="contact-value">linkedin.com/in/username</div>
+          </div>
+        </a>
+
+        <a href="mailto:namaanda@email.com" class="contact-card">
+          <span class="contact-icon">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 6 12 13 2 6" />
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+            </svg>
+          </span>
+          <div>
+            <div class="contact-key">email</div>
+            <div class="contact-value">namaanda@email.com</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 John Doe. Dibuat dengan &lt;/&gt; dan secangkir kopi.
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
