@@ -1,11 +1,11 @@
-# 🌌 Welcome to My Domain Expansion 🌌
 
+# 🌌 Welcome to My Domain Expansion 🌌
 <div align="center">
-  <img src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" alt="Anime Coding GIF" width="400"/>
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWJodWRtenE0N3B3b3dvaWdyeHRoeGhyczVoMTBxcHQ5NWEzcnFyayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZXavCoSUIraPm/giphy.gif" alt="Anime Coding GIF" width="400"/>
   
   <br/>
   
-  *“If you don't take risks, you can't create a future.”* - **Monkey D. Luffy**
+  *“Admiration is the emotion furthest from understanding.”* - **Sosuke Aizen**
 </div>
 
 ---
