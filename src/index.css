@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --obsidian: #0a0a0c;
+    --paper: #f4f1ea;
+    --crimson: #e62429;
+    --gold: #f59e0b;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background-color: #0a0a0c;
+    color: #f4f1ea;
+    scroll-behavior: auto; /* Handled smoothly by Lenis */
+  }
+
+  body {
+    background-color: #0a0a0c;
+    color: #f4f1ea;
+    font-family: 'Manrope', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Hide default cursor on desktop when custom pickaxe cursor is active */
+  @media (pointer: fine) {
+    html, body, a, button, input, textarea {
+      cursor: none !important;
+    }
+  }
+
+  /* Custom high-contrast scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0a0c;
+    border-left: 1px solid #23232f;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #e62429;
+    border: 1px solid #f4f1ea;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f59e0b;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

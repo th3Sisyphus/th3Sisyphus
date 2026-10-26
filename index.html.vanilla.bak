@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Yehezkiel Darren (th3Sisyphus) — Software developer and informatics researcher crafting web platforms, Indonesian NLP models, and 2D games.">
+  <meta name="theme-color" content="#f4efe6">
+  <title>Yehezkiel Darren — Software Developer &amp; Informatics Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- RETRO WORLD HEADER BAR -->
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="brand-group">
+        <a class="nav-brand" href="#top">
+          <span class="brand-badge">P1</span>
+          <span class="brand-name">TH3_SISYPHUS</span>
+        </a>
+        <span class="world-status">WORLD: PORTFOLIO_DEV</span>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#skills" class="nav-link">Inventory</a>
+        <a href="#experience" class="nav-link">Quests</a>
+        <a href="#projects" class="nav-link">Artifacts</a>
+        <a href="#contact" class="nav-link btn-action">Comm Link</a>
+      </nav>
+    </div>
+    <div class="header-clouds-strip" data-ui="true" aria-hidden="true">
+      <div class="header-cloud hc1"></div>
+      <div class="header-cloud hc2"></div>
+      <div class="header-cloud hc3"></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO SECTION / ABOUT (Zona: Floating Archipelago Sky) -->
+    <section class="hero-section" id="about">
+      <!-- 2D Pixel Art Floating Archipelago Backdrop -->
+      <div class="hero-biome-backdrop" aria-hidden="true">
+        <!-- Floating Archipelago Islands in distance -->
+        <div class="floating-islands-layer" data-ui="true">
+          <svg width="100%" height="160" viewBox="0 0 1200 160" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+            <!-- Left Island -->
+            <g class="floating-island is-left" transform="translate(40, 20)">
+              <rect x="10" y="10" width="100" height="8" fill="#22C55E"/>
+              <rect x="18" y="18" width="12" height="4" fill="#22C55E"/>
+              <rect x="54" y="18" width="16" height="4" fill="#22C55E"/>
+              <rect x="86" y="18" width="14" height="4" fill="#22C55E"/>
+              <rect x="10" y="14" width="100" height="4" fill="#15803D"/>
+              <polygon points="10,18 110,18 90,52 68,64 52,64 30,52" fill="#713F12"/>
+              <polygon points="26,18 94,18 82,46 64,56 56,56 38,46" fill="#542E13"/>
+              <rect x="36" y="24" width="10" height="8" fill="#3B271A"/>
+              <rect x="68" y="30" width="12" height="6" fill="#3B271A"/>
+              <rect x="50" y="38" width="8" height="6" fill="#854D0E"/>
+              <rect x="76" y="0" width="4" height="10" fill="#3B271A"/>
+              <polygon points="78,-10 66,4 90,4" fill="#15803D"/>
+            </g>
+            <!-- Mid Island -->
+            <g class="floating-island is-mid" transform="translate(560, 60)">
+              <rect x="10" y="6" width="60" height="6" fill="#22C55E"/>
+              <rect x="10" y="9" width="60" height="3" fill="#15803D"/>
+              <polygon points="10,12 70,12 58,38 44,44 36,44 22,38" fill="#713F12"/>
+              <rect x="26" y="18" width="8" height="6" fill="#3B271A"/>
+              <rect x="44" y="22" width="6" height="6" fill="#854D0E"/>
+            </g>
+            <!-- Right Island -->
+            <g class="floating-island is-right" transform="translate(1010, 15)">
+              <rect x="15" y="12" width="120" height="9" fill="#22C55E"/>
+              <rect x="25" y="21" width="15" height="5" fill="#22C55E"/>
+              <rect x="70" y="21" width="18" height="5" fill="#22C55E"/>
+              <rect x="105" y="21" width="15" height="5" fill="#22C55E"/>
+              <rect x="15" y="17" width="120" height="4" fill="#15803D"/>
+              <polygon points="15,21 135,21 115,62 88,78 62,78 35,62" fill="#713F12"/>
+              <polygon points="32,21 118,21 102,55 82,68 68,68 48,55" fill="#542E13"/>
+              <rect x="45" y="30" width="14" height="10" fill="#3B271A"/>
+              <rect x="80" y="36" width="16" height="8" fill="#3B271A"/>
+              <rect x="62" y="48" width="12" height="8" fill="#854D0E"/>
+              <rect x="40" y="2" width="4" height="10" fill="#3B271A"/>
+              <polygon points="42,-8 30,6 54,6" fill="#15803D"/>
+            </g>
+          </svg>
+        </div>
+        <!-- Drifting Archipelago Clouds -->
+        <div class="hero-clouds-layer" data-ui="true">
+          <div class="hero-cloud hc-a"></div>
+          <div class="hero-cloud hc-b"></div>
+          <div class="hero-cloud hc-c"></div>
+        </div>
+        <!-- Tiled Dirt/Grass Transition Border to next section -->
+        <div class="biome-border-shelf biome-border-bottom" data-ui="true"></div>
+      </div>
+
+      <div class="section-shell hero-grid" id="top">
+        <div class="hero-content">
+          <h1 class="hero-title">Yehezkiel Darren</h1>
+
+          <div class="level-indicator">
+            <span class="level-tag">LVL 26 SCHOLAR</span>
+            <span class="exp-counter">EXP: 8,420 / 10,000</span>
+          </div>
+
+          <p class="hero-lead">
+            Software developer &amp; informatics researcher building Indonesian NLP pipelines, full-stack web platforms, and 2D games.
+          </p>
+
+          <p class="hero-bio">
+            From architecting database pipelines with Laravel and PostgreSQL to training stance detection algorithms on Indonesian news streams, I turn complex problems into reliable, playable software.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Inspect Artifacts</a>
+            <a class="btn btn-secondary" href="#skills">Open Inventory</a>
+          </div>
+        </div>
+
+        <!-- HERO INTERFACE FRAGMENT: INTERACTIVE 2D SANDBOX DIORAMA -->
+        <div class="hero-diorama" data-ui="true" id="heroDiorama">
+          <div class="diorama-header">
+            <span class="diorama-title">WORLD DIORAMA · ISLE #01</span>
+            <div class="gem-meter">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8 1L14 6L8 15L2 6L8 1Z"/>
+              </svg>
+              <span id="gemCount">1,450</span> GEMS
+            </div>
+          </div>
+
+          <div class="diorama-canvas-wrap">
+            <img class="diorama-artwork" id="dioramaArt" src="assets/hero-island.jpg" alt="Pixel art floating island diorama with adventurer character, grass blocks, dirt terrain, and treasure chest" width="600" height="338">
+            <div class="diorama-overlay" id="dioramaOverlay">
+              <span class="floating-sparkle" id="sparkleTag">+10 GEMS!</span>
+            </div>
+          </div>
+
+          <div class="diorama-controls">
+            <button class="btn btn-action-sm" type="button" id="punchIslandBtn">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M3 3H13V13H3V3Z"/>
+              </svg>
+              Mine Block
+            </button>
+            <button class="btn btn-ghost-sm" type="button" id="cycleBiomeBtn">
+              Switch Biome: <span id="currentBiomeText">Daylight</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVENTORY & TECH ATTRIBUTES (Zona: Mining Vault & Castle Forge) -->
+    <section class="skills-section" id="skills">
+      <!-- 2D Pixel Art Castle Forge / Mine Backdrop -->
+      <div class="vault-biome-backdrop" aria-hidden="true">
+        <svg width="100%" height="220" viewBox="0 0 1200 220" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+          <!-- Left Tool Rack -->
+          <g class="forge-rack forge-rack-left" transform="translate(30, 20)">
+            <rect x="0" y="45" width="60" height="8" fill="#713F12"/>
+            <rect x="0" y="51" width="60" height="4" fill="#3B271A"/>
+            <rect x="18" y="10" width="4" height="36" fill="#A16207" transform="rotate(25 20 28)"/>
+            <path d="M12 12 L28 4 L34 10 L18 18 Z" fill="#94A3B8"/>
+            <rect x="22" y="6" width="6" height="6" fill="#F8FAFC"/>
+            <rect x="0" y="115" width="60" height="8" fill="#713F12"/>
+            <rect x="0" y="121" width="60" height="4" fill="#3B271A"/>
+            <rect x="24" y="80" width="8" height="10" fill="#E2E8F0"/>
+            <rect x="22" y="78" width="12" height="4" fill="#713F12"/>
+            <polygon points="28,88 16,112 40,112" fill="#22C55E"/>
+            <rect x="20" y="102" width="16" height="8" fill="#15803D"/>
+            <rect x="24" y="96" width="4" height="4" fill="#FDE047"/>
+          </g>
+          <!-- Right Tool Rack -->
+          <g class="forge-rack forge-rack-right" transform="translate(1110, 20)">
+            <rect x="0" y="45" width="60" height="8" fill="#713F12"/>
+            <rect x="0" y="51" width="60" height="4" fill="#3B271A"/>
+            <rect x="34" y="8" width="6" height="38" fill="#A16207" transform="rotate(-20 37 27)"/>
+            <rect x="14" y="8" width="22" height="14" fill="#64748B"/>
+            <rect x="16" y="10" width="18" height="4" fill="#CBD5E1"/>
+            <rect x="0" y="115" width="60" height="8" fill="#713F12"/>
+            <rect x="0" y="121" width="60" height="4" fill="#3B271A"/>
+            <rect x="20" y="88" width="18" height="24" fill="#0284C7"/>
+            <rect x="24" y="84" width="10" height="6" fill="#F59E0B"/>
+            <rect x="24" y="94" width="10" height="12" fill="#38BDF8"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="section-shell">
+        <div class="section-head-wrap">
+          <h2 class="section-title">Attributes &amp; Inventory</h2>
+          <p class="section-desc">Equipped skill items, database catalysts, and computational specializations.</p>
+        </div>
+
+        <!-- INTERFACE FRAGMENT: PLAYER ITEM VAULT & FLANKING TORCHES -->
+        <div class="inventory-vault-wrap">
+          <!-- Pixel Torch Left -->
+          <div class="pixel-torch torch-left" data-ui="true" aria-hidden="true">
+            <div class="torch-mount" data-ui="true"></div>
+            <div class="torch-flame" data-ui="true">
+              <span class="flame-pixel f-core"></span>
+              <span class="flame-pixel f-outer"></span>
+              <span class="flame-pixel f-spark"></span>
+            </div>
+          </div>
+
+          <div class="inventory-vault" data-ui="true">
+            <!-- Player Stats Bar -->
+            <div class="vault-topbar">
+              <div class="stat-unit">
+                <span class="stat-label">HEALTH</span>
+                <div class="stat-bar-outer">
+                  <div class="stat-bar-fill hp-fill"></div>
+                </div>
+                <span class="stat-val">100 / 100</span>
+              </div>
+
+              <div class="stat-unit">
+                <span class="stat-label">MANA</span>
+                <div class="stat-bar-outer">
+                  <div class="stat-bar-fill mana-fill"></div>
+                </div>
+                <span class="stat-val">85 / 85</span>
+              </div>
+
+              <div class="stat-unit">
+                <span class="stat-label">CLASS</span>
+                <span class="stat-class-val">Full-Stack Alchemist</span>
+              </div>
+            </div>
+
+            <div class="vault-body">
+              <!-- 8 Item Slots Grid -->
+              <div class="slots-grid" role="tablist" aria-label="Inventory slots" data-ui="true">
+                <button class="slot-item active" type="button" role="tab" aria-selected="true" data-slot="laravel" id="slot-laravel">
+                  <div class="slot-token">
+                    <span class="slot-tag">LV12</span>
+                  </div>
+                  <span class="slot-title">Laravel 12</span>
+                </button>
+
+                <button class="slot-item" type="button" role="tab" aria-selected="false" data-slot="python" id="slot-python">
+                  <div class="slot-token">
+                    <span class="slot-tag">PY</span>
+                  </div>
+                  <span class="slot-title">Python 3</span>
+                </button>
+
+                <button class="slot-item" type="button" role="tab" aria-selected="false" data-slot="javascript" id="slot-javascript">
+                  <div class="slot-token">
+                    <span class="slot-tag">JS</span>
+                  </div>
+                  <span class="slot-title">JavaScript</span>
+                </button>
+
+                <button class="slot-item" type="button" role="tab" aria-selected="false" data-slot="compose" id="slot-compose">
+                  <div class="slot-token">
+                    <span class="slot-tag">UI</span>
+                  </div>
+                  <span class="slot-title">Android Compose</span>
+                </button>
+
+                <button class="slot-item" type="button" role="tab" aria-selected="false" data-slot="postgres" id="slot-postgres">
+                  <div class="slot-token">
+                    <span class="slot-tag">SQL</span>
+                  </div>
+                  <span class="slot-title">PostgreSQL</span>
+                </button>
+
+                <button class="slot-item" type="button" role="tab" aria-selected="false" data-slot="mariadb" id="slot-mariadb">
+                  <div class="slot-token">
+                    <span class="slot-tag">DB</span>
+                  </div>
+                  <span class="slot-title">MariaDB / MySQL</span>
+                </button>
+
+                <button class="slot-item" type="button" role="tab" aria-selected="false" data-slot="nlp" id="slot-nlp">
+                  <div class="slot-token">
+                    <span class="slot-tag">NLP</span>
+                  </div>
+                  <span class="slot-title">Stance Detection</span>
+                </button>
+
+                <button class="slot-item" type="button" role="tab" aria-selected="false" data-slot="cv" id="slot-cv">
+                  <div class="slot-token">
+                    <span class="slot-tag">VIS</span>
+                  </div>
+                  <span class="slot-title">Image Processing</span>
+                </button>
+              </div>
+
+              <!-- Item Detail Inspector -->
+              <div class="slot-detail-pane" id="slotDetailPane" aria-live="polite" data-ui="true">
+                <div class="detail-header">
+                  <span class="detail-type-tag" id="itemRarity">LEGENDARY TOOL</span>
+                  <h3 class="detail-name" id="itemName">Laravel 12 Framework</h3>
+                  <p class="detail-subtitle" id="itemSubtitle">Full-Stack Backend Alchemist</p>
+                </div>
+
+                <div class="detail-stats-row">
+                  <div class="detail-stat">
+                    <div class="detail-stat-head">
+                      <span class="detail-stat-key" id="itemStatKey1">BACKEND EFFICIENCY</span>
+                      <span class="detail-stat-num" id="itemStatVal1">+94</span>
+                    </div>
+                    <div class="detail-stat-bar-track">
+                      <div class="detail-stat-bar-fill" id="itemStatBar1" style="width: 94%;"></div>
+                    </div>
+                  </div>
+                  <div class="detail-stat">
+                    <div class="detail-stat-head">
+                      <span class="detail-stat-key" id="itemStatKey2">ARCHITECTURE SCORE</span>
+                      <span class="detail-stat-num" id="itemStatVal2">+88</span>
+                    </div>
+                    <div class="detail-stat-bar-track">
+                      <div class="detail-stat-bar-fill" id="itemStatBar2" style="width: 88%;"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="detail-desc" id="itemDesc">
+                  Primary weapon for building scalable web engines, REST services, database seeders, and authentications. Used across enterprise academic systems and café portals.
+                </p>
+
+                <div class="detail-attributes" id="itemAttributes">
+                  <span class="attr-pill">PHP 8.3 Engine</span>
+                  <span class="attr-pill">Eloquent ORM</span>
+                  <span class="attr-pill">Security Shield</span>
+                  <span class="attr-pill">MVC Core</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pixel Torch Right -->
+          <div class="pixel-torch torch-right" data-ui="true" aria-hidden="true">
+            <div class="torch-mount" data-ui="true"></div>
+            <div class="torch-flame" data-ui="true">
+              <span class="flame-pixel f-core"></span>
+              <span class="flame-pixel f-outer"></span>
+              <span class="flame-pixel f-spark"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / QUEST CHRONICLE (Zona: Adventurer Guild Noticeboard) -->
+    <section class="experience-section" id="experience">
+      <!-- 2D Pixel Art Noticeboard Wood & Ancient Map Grid Backdrop -->
+      <div class="noticeboard-biome-backdrop" aria-hidden="true">
+        <div class="adventure-map-grid">
+          <svg width="100%" height="100%" viewBox="0 0 1200 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+            <!-- Navigation Coordinate Grid -->
+            <line x1="0" y1="100" x2="1200" y2="100" stroke="#FDE68A" stroke-width="2" stroke-dasharray="16 16" opacity="0.14"/>
+            <line x1="0" y1="250" x2="1200" y2="250" stroke="#FDE68A" stroke-width="2" stroke-dasharray="16 16" opacity="0.14"/>
+            <line x1="0" y1="400" x2="1200" y2="400" stroke="#FDE68A" stroke-width="2" stroke-dasharray="16 16" opacity="0.14"/>
+            <line x1="0" y1="550" x2="1200" y2="550" stroke="#FDE68A" stroke-width="2" stroke-dasharray="16 16" opacity="0.14"/>
+            <line x1="200" y1="0" x2="200" y2="600" stroke="#FDE68A" stroke-width="2" stroke-dasharray="16 16" opacity="0.14"/>
+            <line x1="500" y1="0" x2="500" y2="600" stroke="#FDE68A" stroke-width="2" stroke-dasharray="16 16" opacity="0.14"/>
+            <line x1="800" y1="0" x2="800" y2="600" stroke="#FDE68A" stroke-width="2" stroke-dasharray="16 16" opacity="0.14"/>
+            <line x1="1100" y1="0" x2="1100" y2="600" stroke="#FDE68A" stroke-width="2" stroke-dasharray="16 16" opacity="0.14"/>
+            <!-- Contour elevations -->
+            <path d="M120 180 Q220 120 340 180 T560 160 T800 220 T1100 170" stroke="#FDE68A" stroke-width="2" fill="none" opacity="0.16"/>
+            <path d="M80 320 Q280 260 480 340 T880 300 T1140 330" stroke="#FDE68A" stroke-width="2" fill="none" opacity="0.16"/>
+            <path d="M140 460 Q340 400 600 480 T940 440 T1180 470" stroke="#FDE68A" stroke-width="2" fill="none" opacity="0.16"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="section-shell">
+        <div class="section-head-wrap">
+          <h2 class="section-title">Quest Chronicle</h2>
+          <p class="section-desc">Archived academic expeditions, leadership campaigns, and applied engineering missions.</p>
+        </div>
+
+        <div class="quests-container">
+          <!-- Featured Quest: Thesis Researcher with Research Screen -->
+          <article class="quest-card quest-highlight" data-ui="true">
+            <div class="pixel-nail nail-tl" data-ui="true" aria-hidden="true"></div>
+            <div class="pixel-nail nail-tr" data-ui="true" aria-hidden="true"></div>
+
+            <h3 class="quest-title">Indo-NLP Thesis Researcher</h3>
+
+            <div class="quest-meta">
+              <span class="quest-stamp">COMPLETED · 2026</span>
+              <span class="quest-xp">+2,400 EXP</span>
+            </div>
+
+            <div class="quest-grid">
+              <div class="quest-info">
+                <p class="quest-affiliation">Informatics Department · Natural Language Processing Lab</p>
+                <p class="quest-body">
+                  Designed and evaluated a web-based Indonesian hoax detection pipeline using deep NLP stance classification. The platform identifies ideological posture across polarized social threads to isolate misleading misinformation narratives.
+                </p>
+                <ul class="quest-tasks">
+                  <li>Engineered stance classification vectors across Indonesian dialect datasets</li>
+                  <li>Trained supervised models achieving reliable multi-class posture separation</li>
+                  <li>Deployed interactive analytical console with real-time prediction feedback</li>
+                </ul>
+              </div>
+
+              <div class="quest-media-box">
+                <img class="quest-img" src="assets/research-indo-nlp.jpg" alt="Informatics research lab terminal displaying Indo-NLP hoax detection graphs, stance classification results, and neural network node architecture" width="560" height="315">
+                <span class="quest-media-caption">INDO-NLP HOAX DETECTOR CONSOLE v1.2</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Asymmetric Duo: Side-by-Side Quests -->
+          <div class="quest-duo">
+            <!-- Quest 2: Team Project Lead -->
+            <article class="quest-card" data-ui="true">
+              <div class="pixel-nail nail-tl" data-ui="true" aria-hidden="true"></div>
+              <div class="pixel-nail nail-tr" data-ui="true" aria-hidden="true"></div>
+
+              <h3 class="quest-title">ANIMIT Project Lead</h3>
+
+              <div class="quest-meta">
+                <span class="quest-stamp">COMPLETED · 2026</span>
+                <span class="quest-xp">+1,800 EXP</span>
+              </div>
+
+              <p class="quest-affiliation">Academic Software Architecture Group</p>
+              <p class="quest-body">
+                Spearheaded engineering architecture for a desktop content streaming application. Authored comprehensive data flow diagrams, structured database schema integrity, and designed anti-cheat validation parameters to protect application integrity.
+              </p>
+              <div class="quest-tags">
+                <span class="tag-chip">System Architecture</span>
+                <span class="tag-chip">Anti-Cheat Validation</span>
+                <span class="tag-chip">Data Flow Diagrams</span>
+              </div>
+            </article>
+
+            <!-- Quest 3: Event Organizer & Designer -->
+            <article class="quest-card" data-ui="true">
+              <div class="pixel-nail nail-tl" data-ui="true" aria-hidden="true"></div>
+              <div class="pixel-nail nail-tr" data-ui="true" aria-hidden="true"></div>
+
+              <h3 class="quest-title">Tournament Lead &amp; Designer</h3>
+
+              <div class="quest-meta">
+                <span class="quest-stamp">COMPLETED · 2025</span>
+                <span class="quest-xp">+1,200 EXP</span>
+              </div>
+
+              <p class="quest-affiliation">Open Challenge Badminton: King of The Court</p>
+              <p class="quest-body">
+                Directed marketing collateral, participant communication pipelines, and visual branding for an open tournament. Produced stage banners, certificates, social campaigns, and registration logistics.
+              </p>
+              <div class="quest-tags">
+                <span class="tag-chip">Media Production</span>
+                <span class="tag-chip">Tournament Operations</span>
+                <span class="tag-chip">Brand Identity</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS / CRAFTED ARTIFACTS -->
+    <section class="projects-section" id="projects" data-biome-time="daylight">
+      <span id="artifacts" class="anchor-offset" aria-hidden="true"></span>
+
+      <!-- 2D Pixel Art World Biome Backdrop (Scoped strictly to Crafted Artifacts) -->
+      <div class="biome-backdrop" aria-hidden="true">
+        <!-- Tiled Grass/Dirt Block Top Border -->
+        <div class="biome-border-shelf biome-border-top" data-ui="true"></div>
+
+        <!-- Sky Background & Celestial Objects -->
+        <div class="biome-sky">
+          <!-- Twinkling Starlight Pixels -->
+          <div class="biome-stars">
+            <span class="star-pixel p1"></span>
+            <span class="star-pixel p2"></span>
+            <span class="star-pixel p3"></span>
+            <span class="star-pixel p4"></span>
+            <span class="star-pixel p5"></span>
+            <span class="star-pixel p6"></span>
+            <span class="star-pixel p7"></span>
+            <span class="star-pixel p8"></span>
+            <span class="star-pixel p9"></span>
+            <span class="star-pixel p10"></span>
+            <span class="star-pixel p11"></span>
+            <span class="star-pixel p12"></span>
+          </div>
+
+          <!-- Celestial Bodies -->
+          <div class="biome-celestial sun-block" data-ui="true">
+            <svg width="48" height="48" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+              <rect x="14" y="0" width="4" height="4" fill="#FBBF24"/>
+              <rect x="14" y="28" width="4" height="4" fill="#FBBF24"/>
+              <rect x="0" y="14" width="4" height="4" fill="#FBBF24"/>
+              <rect x="28" y="14" width="4" height="4" fill="#FBBF24"/>
+              <rect x="4" y="4" width="4" height="4" fill="#FBBF24"/>
+              <rect x="24" y="4" width="4" height="4" fill="#FBBF24"/>
+              <rect x="4" y="24" width="4" height="4" fill="#FBBF24"/>
+              <rect x="24" y="24" width="4" height="4" fill="#FBBF24"/>
+              <rect x="8" y="8" width="16" height="16" fill="#FACC15"/>
+              <rect x="10" y="10" width="6" height="6" fill="#FEF08A"/>
+              <rect x="10" y="20" width="12" height="2" fill="#EAB308"/>
+            </svg>
+          </div>
+          <div class="biome-celestial sunset-block" data-ui="true">
+            <svg width="64" height="64" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+              <rect x="4" y="4" width="24" height="24" fill="#F97316"/>
+              <rect x="6" y="6" width="20" height="20" fill="#FB923C"/>
+              <rect x="8" y="8" width="16" height="16" fill="#FDE047"/>
+              <rect x="10" y="10" width="8" height="8" fill="#FEF08A"/>
+              <rect x="4" y="24" width="24" height="4" fill="#EA580C"/>
+            </svg>
+          </div>
+          <div class="biome-celestial moon-block" data-ui="true">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+              <rect x="10" y="0" width="10" height="4" fill="#FEF08A"/>
+              <rect x="6" y="4" width="8" height="4" fill="#FEF08A"/>
+              <rect x="4" y="8" width="6" height="8" fill="#FEF08A"/>
+              <rect x="6" y="16" width="8" height="4" fill="#FEF08A"/>
+              <rect x="10" y="20" width="10" height="4" fill="#FEF08A"/>
+              <rect x="14" y="4" width="4" height="16" fill="#FEF08A"/>
+              <rect x="8" y="8" width="2" height="8" fill="#FFFFFF"/>
+            </svg>
+          </div>
+
+          <!-- Drifting Pixel Clouds -->
+          <div class="biome-clouds" id="biomeClouds">
+            <div class="pixel-cloud c1">
+              <svg width="128" height="40" viewBox="0 0 128 40" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                <rect x="24" y="0" width="80" height="8" fill="var(--biome-cloud-fill)"/>
+                <rect x="8" y="8" width="104" height="16" fill="var(--biome-cloud-fill)"/>
+                <rect x="0" y="24" width="128" height="8" fill="var(--biome-cloud-fill)"/>
+                <rect x="0" y="32" width="128" height="8" fill="var(--biome-cloud-shadow)"/>
+                <rect x="8" y="24" width="16" height="8" fill="var(--biome-cloud-shadow)"/>
+                <rect x="88" y="24" width="24" height="8" fill="var(--biome-cloud-shadow)"/>
+              </svg>
+            </div>
+            <div class="pixel-cloud c2">
+              <svg width="160" height="48" viewBox="0 0 160 48" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                <rect x="32" y="0" width="96" height="8" fill="var(--biome-cloud-fill)"/>
+                <rect x="16" y="8" width="128" height="24" fill="var(--biome-cloud-fill)"/>
+                <rect x="0" y="32" width="160" height="8" fill="var(--biome-cloud-fill)"/>
+                <rect x="0" y="40" width="160" height="8" fill="var(--biome-cloud-shadow)"/>
+                <rect x="16" y="32" width="32" height="8" fill="var(--biome-cloud-shadow)"/>
+                <rect x="112" y="32" width="32" height="8" fill="var(--biome-cloud-shadow)"/>
+              </svg>
+            </div>
+            <div class="pixel-cloud c3">
+              <svg width="96" height="32" viewBox="0 0 96 32" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                <rect x="16" y="0" width="64" height="8" fill="var(--biome-cloud-fill)"/>
+                <rect x="8" y="8" width="80" height="12" fill="var(--biome-cloud-fill)"/>
+                <rect x="0" y="20" width="96" height="6" fill="var(--biome-cloud-fill)"/>
+                <rect x="0" y="26" width="96" height="6" fill="var(--biome-cloud-shadow)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Distant Stepped Mountain Silhouettes -->
+        <div class="biome-mountains-far" id="biomeMountainsFar" data-ui="true">
+          <svg width="100%" height="220" viewBox="0 0 1200 220" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+            <path d="M0 220 V140 H60 V120 H100 V100 H140 V70 H180 V50 H220 V70 H260 V100 H300 V130 H360 V110 H420 V80 H460 V60 H500 V40 H540 V60 H580 V90 H640 V120 H700 V100 H760 V70 H800 V50 H840 V70 H880 V100 H920 V120 H980 V90 H1040 V70 H1080 V50 H1120 V70 H1160 V100 H1200 V220 Z" fill="var(--biome-mountain-far)"/>
+            <path d="M0 220 V160 H80 V140 H140 V120 H200 V100 H260 V80 H300 V100 H360 V130 H440 V110 H500 V90 H560 V110 H620 V140 H700 V120 H760 V90 H820 V110 H880 V130 H940 V150 H1000 V120 H1060 V100 H1120 V120 H1180 V150 H1200 V220 Z" fill="var(--biome-mountain-mid)"/>
+          </svg>
+        </div>
+
+        <!-- Near Hills & Stepped Pixel Trees -->
+        <div class="biome-hills-near" id="biomeHillsNear" data-ui="true">
+          <svg width="100%" height="180" viewBox="0 0 1200 180" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+            <path d="M0 180 V110 H80 V90 H160 V80 H240 V70 H320 V80 H400 V90 H480 V80 H560 V70 H640 V60 H720 V70 H800 V80 H880 V70 H960 V80 H1040 V90 H1120 V80 H1200 V180 Z" fill="var(--biome-hill-near)"/>
+            <!-- Pixel Trees -->
+            <rect x="70" y="50" width="8" height="40" fill="var(--biome-tree-trunk)"/>
+            <polygon points="74,10 50,45 60,45 44,65 104,65 88,45 98,45" fill="var(--biome-tree-fill)"/>
+            <rect x="230" y="40" width="10" height="30" fill="var(--biome-tree-trunk)"/>
+            <polygon points="235,10 215,35 225,35 210,50 260,50 245,35 255,35" fill="var(--biome-tree-fill)"/>
+            <rect x="470" y="50" width="10" height="30" fill="var(--biome-tree-trunk)"/>
+            <polygon points="475,15 450,40 460,40 445,60 505,60 490,40 500,40" fill="var(--biome-tree-fill)"/>
+            <rect x="630" y="30" width="10" height="30" fill="var(--biome-tree-trunk)"/>
+            <polygon points="635,5 615,25 625,25 610,45 660,45 645,25 655,25" fill="var(--biome-tree-fill)"/>
+            <rect x="870" y="40" width="10" height="30" fill="var(--biome-tree-trunk)"/>
+            <polygon points="875,10 855,35 865,35 850,50 900,50 885,35 895,35" fill="var(--biome-tree-fill)"/>
+            <rect x="1030" y="55" width="8" height="35" fill="var(--biome-tree-trunk)"/>
+            <polygon points="1034,25 1015,45 1025,45 1010,65 1058,65 1043,45 1053,45" fill="var(--biome-tree-fill)"/>
+          </svg>
+          <!-- Fireflies for Starlight Mode -->
+          <div class="biome-fireflies" data-ui="true">
+            <span class="firefly f1"></span>
+            <span class="firefly f2"></span>
+            <span class="firefly f3"></span>
+            <span class="firefly f4"></span>
+            <span class="firefly f5"></span>
+            <span class="firefly f6"></span>
+          </div>
+        </div>
+
+        <!-- Tiled Grass/Dirt Block Bottom Border -->
+        <div class="biome-border-shelf biome-border-bottom" data-ui="true"></div>
+      </div>
+
+      <div class="section-shell">
+        <div class="section-head-wrap artifacts-head-wrap">
+          <div class="artifacts-title-box">
+            <h2 class="section-title">Crafted Artifacts</h2>
+            <p class="section-desc">Finished games and web applications engineered with clean code and playable mechanics.</p>
+          </div>
+
+          <!-- Retro Console Weather Machine Toggle Button -->
+          <div class="weather-machine-wrap" data-ui="true">
+            <button class="btn weather-machine-btn" id="weatherMachineBtn" type="button" data-ui="true" aria-label="Toggle Biome Weather Cycle">
+              <span class="weather-btn-icon" id="weatherIcon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" shape-rendering="crispEdges">
+                  <rect x="6" y="0" width="4" height="2"/>
+                  <rect x="6" y="14" width="4" height="2"/>
+                  <rect x="0" y="6" width="2" height="4"/>
+                  <rect x="14" y="6" width="2" height="4"/>
+                  <rect x="2" y="2" width="2" height="2"/>
+                  <rect x="12" y="2" width="2" height="2"/>
+                  <rect x="2" y="12" width="2" height="2"/>
+                  <rect x="12" y="12" width="2" height="2"/>
+                  <rect x="4" y="4" width="8" height="8"/>
+                </svg>
+              </span>
+              <span class="weather-btn-text" id="weatherLabel">[ BIOME TIME: DAYLIGHT ]</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="artifacts-stack">
+          <!-- Artifact 1: Wave of Zombies -->
+          <article class="artifact-card" data-ui="true">
+            <div class="artifact-visual">
+              <img class="artifact-img" src="assets/project-wave-of-zombies.jpg" alt="16-bit retro pixel art screenshot of Wave of Zombies 2D platformer game showing player character, floating stone platforms, coin counters, and zombies" width="600" height="338">
+            </div>
+
+            <div class="artifact-info">
+              <h3 class="artifact-title">Wave of Zombies</h3>
+              <p class="artifact-desc">
+                A browser-native 2D side-scrolling platformer featuring custom frame-by-frame sprite animations, gravity physics calculations, obstacle jump-puzzles, and coin collection mechanics.
+              </p>
+              <div class="artifact-specs">
+                <span class="spec-pill">Retro 2D Platformer</span>
+                <span class="spec-pill">HTML5 Canvas</span>
+                <span class="spec-pill">Vanilla JavaScript</span>
+              </div>
+              <div class="artifact-actions">
+                <a class="btn btn-primary" href="https://github.com/th3Sisyphus/wave-of-zombies" target="_blank" rel="noopener">Launch Repository</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artifact 2: KAMEKA -->
+          <article class="artifact-card artifact-reversed" data-ui="true">
+            <div class="artifact-visual">
+              <img class="artifact-img" src="assets/project-kameka.jpg" alt="Charming 16-bit pixel art interior of KAMEKA cafe showing coffee counter, espresso machine, wooden tables, digital menu board, and barista" width="600" height="338">
+            </div>
+
+            <div class="artifact-info">
+              <h3 class="artifact-title">KAMEKA Order Vault</h3>
+              <p class="artifact-desc">
+                An artisan coffee catalog and transactional ordering platform built from scratch on Laravel 12 and MySQL. Features role-based access control for baristas and customers with automated order fulfillment queues.
+              </p>
+              <div class="artifact-specs">
+                <span class="spec-pill">Full-Stack Cafe Engine</span>
+                <span class="spec-pill">Laravel 12</span>
+                <span class="spec-pill">MySQL Database</span>
+              </div>
+              <div class="artifact-actions">
+                <a class="btn btn-primary" href="https://github.com/th3Sisyphus/kameka" target="_blank" rel="noopener">Launch Repository</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / COMM CHANNEL (Zona: Radio Outpost Terminal) -->
+    <section class="contact-section" id="contact">
+      <!-- 2D Pixel Art Radio Outpost Terminal Backdrop -->
+      <div class="radio-outpost-backdrop" aria-hidden="true">
+        <!-- Full-width SVG containing Towers and Cables -->
+        <svg width="100%" height="320" viewBox="0 0 1200 320" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+          <!-- Hanging Cables at Top -->
+          <rect x="0" y="0" width="1200" height="12" fill="#334155"/>
+          <rect x="0" y="8" width="1200" height="4" fill="#1E293B"/>
+          <path d="M0 12 Q300 65 600 12 Q900 65 1200 12" stroke="#1C1917" stroke-width="4" fill="none"/>
+          <path d="M0 12 Q200 45 400 12 Q800 50 1200 12" stroke="#475569" stroke-width="3" fill="none"/>
+
+          <!-- Left Tower -->
+          <g class="outpost-tower tower-left" transform="translate(30, 0)">
+            <rect x="38" y="20" width="4" height="300" fill="#64748B"/>
+            <line x1="20" y1="80" x2="60" y2="80" stroke="#475569" stroke-width="4"/>
+            <line x1="10" y1="160" x2="70" y2="160" stroke="#475569" stroke-width="4"/>
+            <line x1="0" y1="260" x2="80" y2="260" stroke="#475569" stroke-width="4"/>
+            <line x1="20" y1="80" x2="70" y2="160" stroke="#334155" stroke-width="2"/>
+            <line x1="60" y1="80" x2="10" y2="160" stroke="#334155" stroke-width="2"/>
+            <line x1="10" y1="160" x2="80" y2="260" stroke="#334155" stroke-width="2"/>
+            <line x1="70" y1="160" x2="0" y2="260" stroke="#334155" stroke-width="2"/>
+            <rect x="22" y="90" width="12" height="24" fill="#94A3B8"/>
+            <rect x="18" y="96" width="6" height="12" fill="#CBD5E1"/>
+            <rect x="36" y="8" width="8" height="12" fill="#1C1917"/>
+            <rect x="38" y="4" width="4" height="6" fill="#EF4444" class="tower-beacon-blink"/>
+          </g>
+
+          <!-- Right Tower -->
+          <g class="outpost-tower tower-right" transform="translate(1090, 0)">
+            <rect x="38" y="20" width="4" height="300" fill="#64748B"/>
+            <line x1="20" y1="80" x2="60" y2="80" stroke="#475569" stroke-width="4"/>
+            <line x1="10" y1="160" x2="70" y2="160" stroke="#475569" stroke-width="4"/>
+            <line x1="0" y1="260" x2="80" y2="260" stroke="#475569" stroke-width="4"/>
+            <line x1="20" y1="80" x2="70" y2="160" stroke="#334155" stroke-width="2"/>
+            <line x1="60" y1="80" x2="10" y2="160" stroke="#334155" stroke-width="2"/>
+            <line x1="10" y1="160" x2="80" y2="260" stroke="#334155" stroke-width="2"/>
+            <line x1="70" y1="160" x2="0" y2="260" stroke="#334155" stroke-width="2"/>
+            <rect x="46" y="90" width="12" height="24" fill="#94A3B8"/>
+            <rect x="56" y="96" width="6" height="12" fill="#CBD5E1"/>
+            <rect x="36" y="8" width="8" height="12" fill="#1C1917"/>
+            <rect x="38" y="4" width="4" height="6" fill="#EF4444" class="tower-beacon-blink"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="section-shell">
+        <div class="section-head-wrap">
+          <h2 class="section-title">Open Comm Channel</h2>
+          <p class="section-desc">Broadcast a transmission or establish a direct communication link.</p>
+        </div>
+
+        <div class="comm-grid" data-ui="true">
+          <!-- Direct Frequencies -->
+          <div class="comm-frequencies">
+            <span class="comm-panel-title">ESTABLISHED FREQUENCIES</span>
+
+            <a class="freq-channel" href="https://github.com/th3Sisyphus" target="_blank" rel="noopener">
+              <div class="freq-tag">HUB</div>
+              <div class="freq-meta">
+                <span class="freq-name">GitHub Network</span>
+                <span class="freq-address">github.com/th3Sisyphus</span>
+              </div>
+            </a>
+
+            <a class="freq-channel" href="https://linkedin.com/in/yehezkieldarren" target="_blank" rel="noopener">
+              <div class="freq-tag">LINK</div>
+              <div class="freq-meta">
+                <span class="freq-name">LinkedIn Profile</span>
+                <span class="freq-address">linkedin.com/in/yehezkieldarren</span>
+              </div>
+            </a>
+
+            <a class="freq-channel" href="mailto:yehezkieldarren@gmail.com">
+              <div class="freq-tag">MAIL</div>
+              <div class="freq-meta">
+                <span class="freq-name">Direct Transmission</span>
+                <span class="freq-address">yehezkieldarren@gmail.com</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Transmission Terminal Form -->
+          <form class="comm-form" id="commForm" action="mailto:yehezkieldarren@gmail.com" method="GET">
+            <span class="comm-panel-title">TRANSMISSION TERMINAL</span>
+
+            <div class="form-row">
+              <label class="form-label" for="commSender">Sender Call-sign</label>
+              <input class="form-input" type="text" id="commSender" name="subject" placeholder="Your name or organization" required>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="commPayload">Transmission Payload</label>
+              <textarea class="form-input form-textarea" id="commPayload" name="body" rows="4" placeholder="Detail your project brief, collaboration proposal, or message..." required></textarea>
+            </div>
+
+            <div class="broadcast-signal-wrap" data-ui="true">
+              <div class="radar-ping-layer" data-ui="true" aria-hidden="true">
+                <span class="radar-pulse-ring r1"></span>
+                <span class="radar-pulse-ring r2"></span>
+              </div>
+              <button class="btn btn-primary btn-full" type="submit">Broadcast Signal</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RETRO WORLD FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-block">
+        <span class="footer-brand">YEHEZKIEL DARREN</span>
+        <span class="footer-sub">WORLD: TH3_SISYPHUS · 2D RETRO SANDBOX PORTFOLIO</span>
+      </div>
+      <div class="footer-meta">
+        <p class="footer-copy">Crafted with vanilla CSS, strict retro aesthetics, and zero templates.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
