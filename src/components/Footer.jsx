@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* Jump to top */}
           <a
-            href="#about"
+            href="#hero"
             className="flex items-center gap-2 px-4 py-2 bg-[#121218] hover:bg-[#181822] text-[#f4f1ea] font-mono text-xs border border-[#23232f] hover:border-[#f59e0b] transition-colors"
           >
             <span>Ascend to Surface</span>

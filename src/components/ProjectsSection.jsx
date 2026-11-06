@@ -1,9 +1,20 @@
-import React from 'react'
-import { ExternalLink, Github, Sun, Moon, Sunset, Layers, Activity } from 'lucide-react'
-import { portfolioData } from '../data/portfolioData'
+import React, { useMemo, useState } from 'react'
+import { ExternalLink, Github, Sun, Moon, Sunset, Activity } from 'lucide-react'
+import { projectsData, projectCategories } from '../data/portfolioData'
+import TabBar from './TabBar'
 
 export default function ProjectsSection({ currentBiome, onCycleBiome }) {
-  const { projects } = portfolioData
+  const [activeCategory, setActiveCategory] = useState('All')
+
+  const tabs = projectCategories.map((c) => ({ id: c, label: c }))
+
+  const visibleProjects = useMemo(
+    () =>
+      activeCategory === 'All'
+        ? projectsData
+        : projectsData.filter((p) => p.category === activeCategory),
+    [activeCategory]
+  )
 
   const weatherIcons = {
     daylight: <Sun className="w-4 h-4 text-[#f59e0b]" />,
@@ -14,9 +25,9 @@ export default function ProjectsSection({ currentBiome, onCycleBiome }) {
   return (
     <section id="projects" className="relative py-28 border-t-2 border-[#23232f]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header & Biome Machine Wrap */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div className="border-l-4 border-[#e62429] pl-4 sm:pl-6">
             <span className="text-[#e62429] font-pixel text-xs tracking-wider uppercase block mb-1">
               Excavated Code Modules
@@ -25,7 +36,7 @@ export default function ProjectsSection({ currentBiome, onCycleBiome }) {
               Crafted Artifacts
             </h2>
             <p className="mt-2 text-[#c8c4b9] font-mono text-sm max-w-xl">
-              Finished games and full-stack systems engineered with clean architecture and playable mechanics.
+              Game AI, game dev, and full-stack systems engineered with clean architecture and playable mechanics.
             </p>
           </div>
 
@@ -40,9 +51,19 @@ export default function ProjectsSection({ currentBiome, onCycleBiome }) {
           </button>
         </div>
 
+        {/* Category Filter */}
+        <div className="mb-12">
+          <TabBar
+            tabs={tabs}
+            active={activeCategory}
+            onChange={setActiveCategory}
+            label="Filter artifacts by category"
+          />
+        </div>
+
         {/* Artifacts Stack */}
         <div className="space-y-16">
-          {projects.map((project, index) => {
+          {visibleProjects.map((project, index) => {
             const isReversed = index % 2 === 1
             return (
               <article
@@ -55,27 +76,27 @@ export default function ProjectsSection({ currentBiome, onCycleBiome }) {
                 <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-6 border-b border-[#23232f]">
                   <div className="flex items-center gap-3 font-pixel text-xs">
                     <span className="bg-[#e62429] text-[#f4f1ea] px-2.5 py-0.5 border border-[#f4f1ea]">
-                      #{project.number}
+                      #{String(index + 1).padStart(2, '0')}
                     </span>
                     <span className="text-[#f59e0b] uppercase tracking-wider">
-                      {project.badge}
+                      {project.subtitle}
                     </span>
                   </div>
                   <span className="font-mono text-[11px] text-[#a39f94] bg-[#121218] px-2 py-0.5 border border-[#23232f]">
-                    LOC: {project.coordinates}
+                    CLASS: {project.category}
                   </span>
                 </div>
 
                 {/* Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                  
+
                   {/* Visual Preview Box */}
                   <div className={`lg:col-span-5 ${isReversed ? 'lg:order-2' : 'lg:order-1'}`}>
                     <div className="border-2 border-[#23232f] hover:border-[#f59e0b] bg-[#121218] p-2 relative group overflow-hidden transition-colors">
                       <div className="overflow-hidden">
                         <img
                           src={project.image}
-                          alt={project.alt}
+                          alt={`${project.title} preview`}
                           className="w-full h-auto aspect-video object-cover transition-transform duration-500 group-hover:scale-105 [image-rendering:pixelated]"
                           loading="lazy"
                         />
@@ -100,21 +121,11 @@ export default function ProjectsSection({ currentBiome, onCycleBiome }) {
                       {project.description}
                     </p>
 
-                    {/* RPG Stats Badges */}
-                    <div className="grid grid-cols-3 gap-2 py-2">
-                      {Object.entries(project.stats).map(([statName, statValue]) => (
-                        <div key={statName} className="bg-[#121218] p-2 border border-[#23232f] text-center font-mono">
-                          <span className="text-[10px] text-[#a39f94] uppercase block font-pixel">{statName}</span>
-                          <span className="text-xs text-[#f59e0b] font-bold">{statValue}</span>
-                        </div>
-                      ))}
-                    </div>
-
                     {/* Tech Specs */}
                     <div className="flex flex-wrap gap-2 pt-1">
-                      {project.specs.map((spec, i) => (
+                      {project.tech.map((spec) => (
                         <span
-                          key={i}
+                          key={spec}
                           className="bg-[#181822] text-[#f4f1ea] font-mono text-xs px-3 py-1 border border-[#23232f]"
                         >
                           {spec}
@@ -125,7 +136,7 @@ export default function ProjectsSection({ currentBiome, onCycleBiome }) {
                     {/* Launch Action */}
                     <div className="pt-2">
                       <a
-                        href={project.githubUrl}
+                        href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-6 py-3 bg-[#e62429] hover:bg-[#ff3338] text-[#f4f1ea] font-comic text-xl uppercase tracking-wider border-2 border-[#f4f1ea] shadow-[4px_4px_0px_#f59e0b] active:translate-x-0.5 active:translate-y-0.5 transition-all"

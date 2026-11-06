@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { Radio, Send, ExternalLink, Github, Linkedin, Mail, CheckCircle2 } from 'lucide-react'
-import { portfolioData } from '../data/portfolioData'
+import { Radio, Send, ExternalLink, Github, Linkedin, Instagram, Mail, CheckCircle2 } from 'lucide-react'
+import { channelsData, playerProfile } from '../data/portfolioData'
 
 export default function ContactSection() {
-  const { channels } = portfolioData
+  const channels = channelsData
   const [sender, setSender] = useState('')
   const [payload, setPayload] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -13,13 +13,14 @@ export default function ContactSection() {
     // Open user's email client with pre-filled content
     const subject = encodeURIComponent(`[Transmission] From: ${sender}`)
     const body = encodeURIComponent(`Sender: ${sender}\n\nPayload:\n${payload}`)
-    window.location.href = `mailto:yehezkieldarren@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:${playerProfile.socials.email}?subject=${subject}&body=${body}`
     setSubmitted(true)
   }
 
   const channelIcons = {
     github: <Github className="w-5 h-5 text-[#f4f1ea]" />,
     linkedin: <Linkedin className="w-5 h-5 text-[#00e5ff]" />,
+    instagram: <Instagram className="w-5 h-5 text-[#e62429]" />,
     email: <Mail className="w-5 h-5 text-[#f59e0b]" />,
   }
 

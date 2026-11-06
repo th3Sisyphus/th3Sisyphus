@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { Sparkles, Pickaxe, ArrowDown, Shield, Zap, Compass, Terminal } from 'lucide-react'
-import { portfolioData } from '../data/portfolioData'
+import { Pickaxe, Compass, Terminal, MapPin, ScrollText, Hammer, BookOpen, Flame } from 'lucide-react'
+import { playerProfile } from '../data/portfolioData'
 
 export default function HeroSection({ gemCount, onMineBlock, currentBiome, onCycleBiome }) {
-  const { hero } = portfolioData
+  const profile = playerProfile
+  const { currentStatus } = profile
   const [mineFeedback, setMineFeedback] = useState(false)
 
   const handleMineClick = () => {
@@ -12,24 +13,30 @@ export default function HeroSection({ gemCount, onMineBlock, currentBiome, onCyc
     setTimeout(() => setMineFeedback(false), 300)
   }
 
+  const questLog = [
+    { key: 'doing', label: 'DOING', icon: Hammer, color: '#e62429', text: currentStatus.currentlyDoing },
+    { key: 'learning', label: 'LEARNING', icon: BookOpen, color: '#00e5ff', text: currentStatus.currentlyLearning },
+    { key: 'obsession', label: 'OBSESSION', icon: Flame, color: '#22c55e', text: currentStatus.currentObsession },
+  ]
+
   return (
-    <section id="about" className="relative min-h-screen pt-28 pb-20 flex flex-col justify-center">
+    <section id="hero" className="relative min-h-screen pt-28 pb-20 flex flex-col justify-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          {/* Left Column: Narrative Comic Box & Persona Specs */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start lg:items-center">
+
+          {/* Left Column: Narrative Comic Box, Active Quest Log & Persona Specs */}
           <div className="lg:col-span-7 space-y-6">
-            
-            {/* Level & Class Header */}
+
+            {/* Handle & Title Header */}
             <div className="flex flex-wrap items-center gap-3 font-pixel text-xs">
               <span className="bg-[#e62429] text-[#f4f1ea] px-3 py-1 border border-[#f4f1ea] shadow-[3px_3px_0px_#f59e0b]">
-                {hero.level}
+                @{profile.handle}
               </span>
               <span className="bg-[#121218] text-[#f59e0b] px-3 py-1 border border-[#23232f]">
-                {hero.exp}
+                {profile.title}
               </span>
               <span className="text-[#a39f94] tracking-widest hidden sm:inline">
-                [DOMAIN: FULL-STACK ALCHEMY]
+                [CLASS: GAME AI × FULL-STACK]
               </span>
             </div>
 
@@ -39,25 +46,18 @@ export default function HeroSection({ gemCount, onMineBlock, currentBiome, onCyc
                 PLAYER PROFILE
               </div>
 
-              <h1 className="font-comic text-5xl sm:text-7xl lg:text-8xl text-[#f4f1ea] tracking-tight uppercase leading-none drop-shadow-[2px_2px_0px_#e62429]">
-                {hero.name}
+              <h1 className="font-comic text-5xl sm:text-6xl lg:text-7xl text-[#f4f1ea] tracking-tight uppercase leading-[0.95] drop-shadow-[2px_2px_0px_#e62429]">
+                {profile.name}
               </h1>
 
-              <p className="mt-3 font-mono text-sm sm:text-base text-[#f59e0b] font-semibold flex items-center gap-2">
-                <span className="inline-block w-2 h-2 bg-[#f59e0b]"></span>
-                {hero.lead}
+              <p className="mt-3 font-mono text-sm sm:text-base text-[#f59e0b] font-semibold flex items-start gap-2">
+                <span className="inline-block w-2 h-2 mt-2 shrink-0 bg-[#f59e0b]"></span>
+                {profile.role}
               </p>
 
               <p className="mt-4 text-[#c8c4b9] text-sm sm:text-base leading-relaxed border-l-2 border-[#e62429] pl-4">
-                {hero.bio}
+                {profile.bioShort}
               </p>
-
-              {/* Aizen / Anime Philosophy Quote */}
-              <div className="mt-5 p-3 bg-[#121218] border border-[#23232f] text-xs font-mono text-[#a39f94]">
-                <span className="text-[#e62429] font-bold">MEMOIRE: </span>
-                <span className="italic">{hero.quote.text}</span>
-                <span className="text-[#f59e0b] ml-1 font-semibold">— {hero.quote.author}</span>
-              </div>
 
               {/* Action Buttons */}
               <div className="mt-6 flex flex-wrap gap-4 pt-2">
@@ -69,28 +69,77 @@ export default function HeroSection({ gemCount, onMineBlock, currentBiome, onCyc
                   Inspect Artifacts
                 </a>
                 <a
-                  href="#skills"
+                  href="#vault"
                   className="px-6 py-3 bg-[#121218] hover:bg-[#181822] text-[#f4f1ea] font-comic text-xl uppercase tracking-wider border-2 border-[#23232f] hover:border-[#f59e0b] active:translate-x-0.5 active:translate-y-0.5 transition-all inline-flex items-center gap-2"
                 >
                   <Terminal className="w-5 h-5 text-[#f59e0b]" />
-                  Open Inventory
+                  Open Vault
+                </a>
+                <a
+                  href="#notes"
+                  className="px-6 py-3 bg-[#121218] hover:bg-[#181822] text-[#f4f1ea] font-comic text-xl uppercase tracking-wider border-2 border-[#23232f] hover:border-[#f59e0b] active:translate-x-0.5 active:translate-y-0.5 transition-all inline-flex items-center gap-2"
+                >
+                  <ScrollText className="w-5 h-5 text-[#f59e0b]" />
+                  Field Notes
                 </a>
               </div>
             </div>
 
-            {/* RPG Quest Attributes Grid */}
+            {/* Active Quest Log (Now) */}
+            <div
+              className="border-4 border-[#0a0a0c] bg-[#f59e0b] shadow-[6px_6px_0px_#f4f1ea] relative"
+              aria-label="Active quest log"
+            >
+              <div className="flex items-center justify-between gap-3 px-4 py-2 bg-[#0a0a0c] border-b-4 border-[#0a0a0c]">
+                <span className="font-pixel text-xs text-[#f59e0b] tracking-wider flex items-center gap-2">
+                  <span className="w-2 h-2 bg-[#f59e0b] animate-pulse"></span>
+                  ACTIVE QUEST LOG // NOW
+                </span>
+                <span className="font-pixel text-[10px] text-[#a39f94]">
+                  UPDATED: {currentStatus.updatedAt}
+                </span>
+              </div>
+
+              <dl className="divide-y-2 divide-[#0a0a0c]">
+                {questLog.map(({ key, label, icon: Icon, color, text }) => (
+                  <div key={key} className="grid grid-cols-1 sm:grid-cols-[132px_1fr] gap-1 sm:gap-4 px-4 py-3 items-start">
+                    <dt className="font-pixel text-[11px] text-[#0a0a0c] font-bold flex items-center gap-2">
+                      <span
+                        className="w-5 h-5 flex items-center justify-center border-2 border-[#0a0a0c]"
+                        style={{ backgroundColor: color }}
+                      >
+                        <Icon className="w-3 h-3 text-[#f4f1ea]" />
+                      </span>
+                      {label}
+                    </dt>
+                    <dd className="font-mono text-xs sm:text-[13px] text-[#0a0a0c] font-semibold leading-snug">
+                      {text}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+
+            {/* Persona Attributes Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
               <div className="bg-[#121218]/90 p-3 border border-[#23232f]">
-                <span className="text-[#e62429] font-bold block text-[11px] font-pixel">⚔️ MAIN QUEST</span>
-                <span className="text-[#c8c4b9] mt-1 block leading-tight">{hero.stats.mainQuest}</span>
+                <span className="text-[#e62429] font-bold text-[11px] font-pixel flex items-center gap-1.5">
+                  <MapPin className="w-3 h-3" /> BASE CAMP
+                </span>
+                <span className="text-[#c8c4b9] mt-1 block leading-tight">{profile.location}</span>
               </div>
-              <div className="bg-[#121218]/90 p-3 border border-[#23232f]">
-                <span className="text-[#f59e0b] font-bold block text-[11px] font-pixel">🤝 PARTY SEARCH</span>
-                <span className="text-[#c8c4b9] mt-1 block leading-tight">{hero.stats.partySearch}</span>
-              </div>
-              <div className="bg-[#121218]/90 p-3 border border-[#23232f]">
-                <span className="text-[#22c55e] font-bold block text-[11px] font-pixel">⚡ BUFF MODIFIER</span>
-                <span className="text-[#c8c4b9] mt-1 block leading-tight">{hero.stats.funFact}</span>
+              <div className="sm:col-span-2 bg-[#121218]/90 p-3 border border-[#23232f]">
+                <span className="text-[#f59e0b] font-bold block text-[11px] font-pixel">SUB-CLASSES</span>
+                <div className="mt-1.5 flex flex-wrap gap-1.5">
+                  {profile.hobbies.map((hobby) => (
+                    <span
+                      key={hobby}
+                      className="bg-[#0a0a0c] text-[#f4f1ea] px-2 py-0.5 border border-[#23232f]"
+                    >
+                      {hobby}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
 

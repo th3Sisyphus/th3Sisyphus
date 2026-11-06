@@ -1,292 +1,303 @@
+// src/data/portfolioData.js
+// Tanpa level bar / persentase / tier kemahiran untuk skill apa pun.
+
+export const playerProfile = {
+  name: "Yehezkiel Darren Putra Wardoyo",
+  handle: "th3Sisyphus",
+  title: "durenzz",
+  role: "Junior AI Engineer (Game AI) & Full-Stack Developer",
+  bioShort:
+    "Manusia biasa yang sedang belajar menjadi lebih profesional di bidang yang ditekuni. Seorang pribadi yang mampu bekerja dengan baik secara berkelompok, menyukai eksplorasi kecerdasan buatan di dalam video game, arsitektur web, musik, dan seduhan kopi manual.",
+  location: "Sleman, Yogyakarta / Indonesia",
+  hobbies: [
+    "Main Game",
+    "Main Piano",
+    "Main Gitar",
+    "Mendengarkan Musik",
+    "Home Brewer",
+  ],
+  currentStatus: {
+    updatedAt: "6 November 2026",
+    currentlyDoing:
+      "Skripsi Game AI (Behaviour Tree & Blackboard NPC), Investasi di Growtopia, Eksplorasi semua jenis kopi",
+    currentlyLearning:
+      "Metode penelitian eksperimen Game AI & arsitektur pengambilan keputusan Companion NPC",
+    currentObsession: "Bermain Growtopia & ngulik semua metode seduh V60",
+  },
+  socials: {
+    github: "https://github.com/th3Sisyphus",
+    linkedin: "https://www.linkedin.com/in/yehezkiel-darren-304bb1352/",
+    instagram: "https://www.instagram.com/darrenpw_/",
+    email: "darren.wardoyo@gmail.com",
+  },
+};
+
+export const projectCategories = ["All", "Game AI & Dev", "Web & Systems"];
+
+export const projectsData = [
+  {
+    id: 1,
+    title: "Wave of Zombies",
+    category: "Game AI & Dev",
+    subtitle: "2D Top-Down Survival Shooter",
+    description:
+      "Game survival shooter 2D yang dibangun dari nol. Mengimplementasikan sistem wave spawner dinamis, pathfinding musuh, manajemen state senjata, dan optimasi performa objek.",
+    image: "/assets/project-wave-of-zombies.png",
+    tech: ["Python", "Pygame", "Game Loop", "AI Pathfinding"],
+    link: "https://github.com/th3Sisyphus/wave-of-zombies",
+  },
+  {
+    id: 2,
+    title: "Kameka",
+    category: "Web & Systems",
+    subtitle: "Full-Stack Web Platform",
+    description:
+      "Pengembangan aplikasi web modern dengan arsitektur database relasional yang terstruktur, antarmuka responsif, dan manajemen alur data backend yang rapi.",
+    image: "/assets/project-kameka.jpg",
+    tech: ["PHP", "Laravel", "JavaScript", "MariaDB", "Tailwind CSS"],
+    link: "https://github.com/th3Sisyphus/kameka",
+  },
+  {
+    id: 3,
+    title: "Context-Aware Companion NPC",
+    category: "Game AI & Dev",
+    subtitle: "Skripsi / Game AI Research",
+    description:
+      "Pengembangan Context-Aware Behaviour Tree berbasis Blackboard untuk pengambilan keputusan Companion NPC yang adaptif terhadap situasi pertarungan dan lingkungan pemain.",
+    // Tetap gunakan path aset yang ada agar tidak broken image
+    image: "/assets/research-indo-nlp.jpg",
+    tech: ["Game AI", "Behaviour Tree", "Blackboard System", "Python"],
+    link: "https://github.com/th3Sisyphus",
+  },
+];
+
+export const questsData = [
+  {
+    id: "quest-1",
+    period: "Sekarang",
+    title: "Final Boss: Skripsi Game AI",
+    organization: "Universitas Kristen Duta Wacana (UKDW)",
+    description:
+      "Pengembangan Context-Aware Behaviour Tree Berbasis Blackboard untuk Pengambilan Keputusan Companion NPC. Meneliti bagaimana NPC pendamping membaca konteks pertarungan dan lingkungan sebelum memilih aksi.",
+    type: "Main Quest",
+    featured: true,
+    // Tetap gunakan path aset yang ada agar tidak broken image
+    image: "/assets/research-indo-nlp.jpg",
+    caption: "THESIS DOSSIER // COMPANION NPC",
+    tags: ["Behaviour Tree", "Blackboard", "Companion NPC", "Game AI"],
+  },
+  {
+    id: "quest-2",
+    period: "Masa Kuliah",
+    title: "Informatics Engineering Excavation",
+    organization: "Universitas Kristen Duta Wacana (UKDW)",
+    description:
+      "Mendalami rekayasa perangkat lunak, kecerdasan buatan terapan, struktur data, dan pengembangan sistem web full-stack maupun game.",
+    type: "Guild History",
+    tags: ["Software Engineering", "Applied AI", "Full-Stack"],
+  },
+  {
+    id: "quest-3",
+    period: "Ongoing",
+    title: "Home Brewer & Musician Journey",
+    organization: "Personal Life",
+    description:
+      "Mengulik variabel seduhan kopi V60 (rasio, suhu, grind size), bermain piano dan gitar, serta menjaga kewarasan lewat musik dan game.",
+    type: "Side Quest",
+    tags: ["V60", "Piano", "Gitar"],
+  },
+  {
+    id: "quest-4",
+    period: "2026",
+    title: "ANIMIT Project Lead",
+    organization: "Academic Software Architecture Group",
+    description:
+      "Memimpin arsitektur rekayasa untuk aplikasi streaming konten desktop: menyusun data flow diagram, skema database yang konsisten, serta parameter validasi anti-cheat.",
+    type: "Guild History",
+    tags: ["System Architecture", "Anti-Cheat Validation", "Data Flow Diagrams"],
+  },
+  {
+    id: "quest-5",
+    period: "2025",
+    title: "Tournament Lead & Designer",
+    organization: "Open Challenge Badminton: King of The Court",
+    description:
+      "Mengarahkan materi pemasaran, komunikasi peserta, dan identitas visual turnamen terbuka: banner panggung, sertifikat, kampanye sosial, dan logistik pendaftaran.",
+    type: "Guild History",
+    tags: ["Media Production", "Tournament Operations", "Brand Identity"],
+  },
+];
+
+export const fieldNoteCategories = [
+  "All",
+  "Game AI & Tech",
+  "Coffee & Music",
+  "Thoughts",
+];
+
+export const fieldNotesData = [
+  {
+    id: "note-1",
+    title: "Kenapa Behaviour Tree + Blackboard Cocok untuk Companion NPC",
+    date: "2026-11-06",
+    category: "Game AI & Tech",
+    status: "Evergreen",
+    summary:
+      "Catatan seputar arsitektur pengambilan keputusan NPC agar tidak terasa kaku seperti robot saat menemani player.",
+    content: `Dalam pengembangan game modern, Companion NPC sering kali terasa membebani pemain karena keputusan AI yang tidak peka konteks. Dengan memadukan Behaviour Tree dan Blackboard sebagai memori bersama (shared memory), NPC bisa membaca konteks lingkungan secara real-time sebelum mengeksekusi node aksi.`,
+  },
+  {
+    id: "note-2",
+    title: "Catatan Seduh V60: Mencari Sweet Spot",
+    date: "2026-11-01",
+    category: "Coffee & Music",
+    status: "Seedling",
+    summary:
+      "Log eksperimen rasio air, suhu, dan teknik pouring untuk mengeluarkan karakter terbaik dari biji kopi.",
+    content: `Catatan ini masih berupa draf. Resep lengkap akan ditulis setelah eksperimen selesai.
+
+Variabel yang sedang diulik: rasio kopi dan air, suhu air, ukuran gilingan, serta teknik tuang. Satu variabel diubah per seduhan, supaya perbedaan rasa bisa ditelusuri penyebabnya.`,
+  },
+];
+
+// TANPA LEVEL BAR - hanya nama, kategori, dan deskripsi fungsi
+export const inventoryData = {
+  techArsenal: [
+    {
+      id: "tech-1",
+      name: "HTML + CSS + JS",
+      tag: "Language",
+      category: "Core Web",
+      desc: "Fondasi antarmuka web interaktif dan styling kustom.",
+    },
+    {
+      id: "tech-2",
+      name: "Node.js",
+      tag: "Language",
+      category: "Runtime & Backend",
+      desc: "Eksekusi JavaScript sisi server dan tooling modern.",
+    },
+    {
+      id: "tech-3",
+      name: "PHP & Laravel",
+      tag: "Framework",
+      category: "Full-Stack Framework",
+      desc: "Pengembangan aplikasi web skala penuh yang kokoh dan terstruktur.",
+    },
+    {
+      id: "tech-4",
+      name: "Python",
+      tag: "Language",
+      category: "AI & Scripting",
+      desc: "Bahasa utama untuk eksperimen Game AI, logika algoritma, dan prototipe.",
+    },
+    {
+      id: "tech-5",
+      name: "MariaDB",
+      tag: "Database",
+      category: "Relational DB",
+      desc: "Manajemen basis data relasional untuk aplikasi produksi.",
+    },
+    {
+      id: "tech-6",
+      name: "PostgreSQL",
+      tag: "Database",
+      category: "Relational DB",
+      desc: "Sistem database tingkat lanjut dengan integritas data tinggi.",
+    },
+    {
+      id: "tech-7",
+      name: "Behaviour Trees & Game AI",
+      tag: "Game AI",
+      category: "Decision Making",
+      desc: "Arsitektur pengambilan keputusan NPC berbasis Behaviour Tree dan Blackboard untuk skripsi.",
+    },
+  ],
+  personalGear: [
+    {
+      id: "gear-1",
+      name: "Lenovo Ideapad Gaming 3 15 series",
+      category: "Workstation",
+      desc: "Mesin utama untuk ngoding, simulasi Behaviour Tree, dan render.",
+    },
+    {
+      id: "gear-2",
+      name: "V60 Dripper + Grinder + Kettle",
+      category: "Coffee Rig",
+      desc: "Senjata utama home brewer setiap pagi dan malam.",
+    },
+    {
+      id: "gear-3",
+      name: "Piano & Gitar",
+      category: "Instruments",
+      desc: "Pelarian terbaik saat butuh jeda dari layar monitor.",
+    },
+    {
+      id: "gear-4",
+      name: "Nakamichi TW018ENC",
+      category: "Audio",
+      desc: "Teman setia mendengarkan musik sambil menyusun kode.",
+    },
+  ],
+  tavernLogs: [
+    {
+      id: "log-1",
+      name: "Growtopia",
+      category: "Game",
+      desc: "Aktif trading dan investasi item di dalam ekonomi game.",
+    },
+    {
+      id: "log-2",
+      name: "Eksplorasi Metode V60",
+      category: "Coffee",
+      desc: "Mencoba berbagai biji single origin dan variasi teknik tuangan.",
+    },
+    {
+      id: "log-3",
+      name: "Sesi Piano & Gitar",
+      category: "Music",
+      desc: "Latihan lagu favorit di sela-sela pengerjaan skripsi.",
+    },
+  ],
+};
+
+export const channelsData = [
+  {
+    id: "github",
+    tag: "HUB",
+    name: "GitHub Network",
+    address: "github.com/th3Sisyphus",
+    url: playerProfile.socials.github,
+  },
+  {
+    id: "linkedin",
+    tag: "LINK",
+    name: "LinkedIn Profile",
+    address: "linkedin.com/in/yehezkiel-darren",
+    url: playerProfile.socials.linkedin,
+  },
+  {
+    id: "instagram",
+    tag: "SNAP",
+    name: "Instagram",
+    address: "@darrenpw_",
+    url: playerProfile.socials.instagram,
+  },
+  {
+    id: "email",
+    tag: "MAIL",
+    name: "Direct Transmission",
+    address: playerProfile.socials.email,
+    url: `mailto:${playerProfile.socials.email}`,
+  },
+];
+
+// Agregat kompatibilitas untuk import lama `portfolioData`
 export const portfolioData = {
-  hero: {
-    name: "Yehezkiel Darren",
-    handle: "th3Sisyphus",
-    level: "LVL 26 SCHOLAR",
-    exp: "8,420 / 10,000",
-    initialGems: 1450,
-    quote: {
-      text: "“Admiration is the emotion furthest from understanding.”",
-      author: "Sosuke Aizen",
-    },
-    lead: "Software developer & informatics researcher building Indonesian NLP pipelines, full-stack web platforms, and 2D games.",
-    bio: "From architecting database pipelines with Laravel and PostgreSQL to training stance detection algorithms on Indonesian news streams, I turn complex problems into reliable, playable software.",
-    stats: {
-      mainQuest:
-        "Leveling up as a developer & engineering high-impact web systems.",
-      sideQuests:
-        "Creative shaders, UI/UX optimization, and recursive algorithm puzzles.",
-      partySearch:
-        "Always open to collaborating on high-ambition software & open-source!",
-      funFact:
-        "Coding throughput surges by 200% when tuned to Anime OSTs & Lofi beats.",
-    },
-  },
-
-  skills: {
-    laravel: {
-      id: "laravel",
-      token: "LV12",
-      name: "Laravel 12 Framework",
-      rarity: "LEGENDARY TOOL",
-      subtitle: "Full-Stack Backend Alchemist",
-      stat1Key: "BACKEND EFFICIENCY",
-      stat1Val: "+94",
-      stat1Pct: 94,
-      stat2Key: "ARCHITECTURE SCORE",
-      stat2Val: "+88",
-      stat2Pct: 88,
-      desc: "Primary weapon for building scalable web engines, REST services, database seeders, and authentications. Used across enterprise academic systems and café portals.",
-      tags: ["PHP 8.3 Engine", "Eloquent ORM", "Security Shield", "MVC Core"],
-    },
-    python: {
-      id: "python",
-      token: "PY",
-      name: "Python 3",
-      rarity: "COMPUTATIONAL ALCHEMY",
-      subtitle: "NLP & Machine Learning Specialist",
-      stat1Key: "MODEL ACCURACY",
-      stat1Val: "+94",
-      stat1Pct: 94,
-      stat2Key: "PIPELINE SPEED",
-      stat2Val: "+89",
-      stat2Pct: 89,
-      desc: "Primary engine for NLP stance detection models, recursive algorithmic scripts, and Tkinter GUI simulations.",
-      tags: ["PyTorch", "Scikit-Learn", "Pandas", "Algorithm Core"],
-    },
-    javascript: {
-      id: "javascript",
-      token: "JS",
-      name: "Modern JavaScript",
-      rarity: "REACTIVE RUNTIME",
-      subtitle: "Client-Side & Canvas Engineer",
-      stat1Key: "DOM RESPONSIVENESS",
-      stat1Val: "+92",
-      stat1Pct: 92,
-      stat2Key: "ANIMATION FPS",
-      stat2Val: "+90",
-      stat2Pct: 90,
-      desc: "High-performance reactive frontend engine. Powers custom DOM state management, canvas diorama physics, and zero-dependency retro UI interactions.",
-      tags: [
-        "ES6+ Standards",
-        "Canvas 2D API",
-        "Async Pipeline",
-        "Event Dispatch",
-      ],
-    },
-    compose: {
-      id: "compose",
-      token: "UI",
-      name: "Android Compose",
-      rarity: "MOBILE FORGE",
-      subtitle: "Declarative Mobile Architect",
-      stat1Key: "LAYOUT FLUIDITY",
-      stat1Val: "+86",
-      stat1Pct: 86,
-      stat2Key: "STATE ISOLATION",
-      stat2Val: "+89",
-      stat2Pct: 89,
-      desc: "Modern declarative Android interface system. Architects reactive mobile screens, stateful viewmodels, and responsive native gesture pipelines.",
-      tags: [
-        "Kotlin Runtime",
-        "Declarative UI",
-        "State Hoisting",
-        "Material 3",
-      ],
-    },
-    postgres: {
-      id: "postgres",
-      token: "SQL",
-      name: "PostgreSQL Database",
-      rarity: "RELATIONAL CITADEL",
-      subtitle: "Enterprise ACID Database Architect",
-      stat1Key: "ACID RELIABILITY",
-      stat1Val: "+95",
-      stat1Pct: 95,
-      stat2Key: "QUERY THROUGHPUT",
-      stat2Val: "+91",
-      stat2Pct: 91,
-      desc: "Rock-solid enterprise relational data store. Configured with optimized b-tree indexing, foreign key constraints, JSONB schemas, and transactional security.",
-      tags: [
-        "Index Optimizer",
-        "ACID Reliability",
-        "JSONB Engine",
-        "Concurrency",
-      ],
-    },
-    mariadb: {
-      id: "mariadb",
-      token: "DB",
-      name: "MariaDB / MySQL",
-      rarity: "TRANSACTION CORE",
-      subtitle: "High-Speed Relational Core",
-      stat1Key: "QUERY SPEED",
-      stat1Val: "+89",
-      stat1Pct: 89,
-      stat2Key: "TABLE THROUGHPUT",
-      stat2Val: "+85",
-      stat2Pct: 85,
-      desc: "Fast, dependable relational database core used in web portals and transactional ordering queues. Configured with optimized indexes and role privileges.",
-      tags: [
-        "InnoDB Engine",
-        "Foreign Key Mesh",
-        "Order Queues",
-        "Fast Queries",
-      ],
-    },
-    nlp: {
-      id: "nlp",
-      token: "NLP",
-      name: "Stance Detection NLP",
-      rarity: "MYTHIC RESEARCH",
-      subtitle: "Ideological Vector Specialist",
-      stat1Key: "STANCE ACCURACY",
-      stat1Val: "+96",
-      stat1Pct: 96,
-      stat2Key: "FEATURE EXTRACTION",
-      stat2Val: "+91",
-      stat2Pct: 91,
-      desc: "Undergraduate thesis specialisation: fine-tuning classification vectors to analyze political stance and filter Indonesian misinformation streams.",
-      tags: [
-        "Indonesian Corpus",
-        "Stance Vectors",
-        "Hoax Detector",
-        "TF-IDF / BERT",
-      ],
-    },
-    cv: {
-      id: "cv",
-      token: "VIS",
-      name: "Digital Image Processing",
-      rarity: "VISION SENSOR",
-      subtitle: "Spatial Matrix & Kernel Specialist",
-      stat1Key: "SPATIAL FILTERING",
-      stat1Val: "+88",
-      stat1Pct: 88,
-      stat2Key: "MATRIX PRECISION",
-      stat2Val: "+87",
-      stat2Pct: 87,
-      desc: "Pixel manipulation, spatial convolution filters, edge detection kernels, and matrix transformations for discrete computer vision operations.",
-      tags: [
-        "Convolution Kernel",
-        "Frequency Domain",
-        "Morphology Ops",
-        "Pixel Matrix",
-      ],
-    },
-  },
-
-  quests: [
-    {
-      id: "indo-nlp",
-      title: "Indo-NLP Thesis Researcher",
-      status: "COMPLETED · 2026",
-      xp: "+2,400 EXP",
-      affiliation: "Informatics Department · Natural Language Processing Lab",
-      featured: true,
-      image: "/assets/research-indo-nlp.jpg",
-      caption: "INDO-NLP HOAX DETECTOR CONSOLE v1.2",
-      body: "Designed and evaluated a web-based Indonesian hoax detection pipeline using deep NLP stance classification. The platform identifies ideological posture across polarized social threads to isolate misleading misinformation narratives.",
-      tasks: [
-        "Engineered stance classification vectors across Indonesian dialect datasets",
-        "Trained supervised models achieving reliable multi-class posture separation",
-        "Deployed interactive analytical console with real-time prediction feedback",
-      ],
-      tags: [
-        "NLP Vectors",
-        "Stance Classifier",
-        "Indonesian Corpus",
-        "Web Analytics",
-      ],
-    },
-    {
-      id: "animit",
-      title: "ANIMIT Project Lead",
-      status: "COMPLETED · 2026",
-      xp: "+1,800 EXP",
-      affiliation: "Academic Software Architecture Group",
-      featured: false,
-      body: "Spearheaded engineering architecture for a desktop content streaming application. Authored comprehensive data flow diagrams, structured database schema integrity, and designed anti-cheat validation parameters to protect application integrity.",
-      tags: [
-        "System Architecture",
-        "Anti-Cheat Validation",
-        "Data Flow Diagrams",
-      ],
-    },
-    {
-      id: "tournament",
-      title: "Tournament Lead & Designer",
-      status: "COMPLETED · 2025",
-      xp: "+1,200 EXP",
-      affiliation: "Open Challenge Badminton: King of The Court",
-      featured: false,
-      body: "Directed marketing collateral, participant communication pipelines, and visual branding for an open tournament. Produced stage banners, certificates, social campaigns, and registration logistics.",
-      tags: ["Media Production", "Tournament Operations", "Brand Identity"],
-    },
-  ],
-
-  projects: [
-    {
-      id: "wave-of-zombies",
-      number: "01",
-      title: "Wave of Zombies",
-      badge: "RETRO 2D PLATFORMER",
-      image: "/assets/project-wave-of-zombies.jpg",
-      alt: "16-bit retro pixel art screenshot of Wave of Zombies 2D platformer game",
-      description:
-        "A browser-native 2D side-scrolling platformer featuring custom frame-by-frame sprite animations, gravity physics calculations, obstacle jump-puzzles, and coin collection mechanics.",
-      specs: [
-        "Retro 2D Platformer",
-        "HTML5 Canvas",
-        "Vanilla JavaScript",
-        "Custom Physics",
-      ],
-      githubUrl: "https://github.com/th3Sisyphus/wave-of-zombies",
-      coordinates: "MINE_SHAFT_LEVEL_02",
-      stats: { physics: "99.2%", frames: "60 FPS", difficulty: "HARD" },
-    },
-    {
-      id: "kameka",
-      number: "02",
-      title: "KAMEKA Order Vault",
-      badge: "FULL-STACK CAFE ENGINE",
-      image: "/assets/project-kameka.jpg",
-      alt: "Charming 16-bit pixel art interior of KAMEKA cafe showing coffee counter and barista",
-      description:
-        "An artisan coffee catalog and transactional ordering platform built from scratch on Laravel 12 and MySQL. Features role-based access control for baristas and customers with automated order fulfillment queues.",
-      specs: [
-        "Full-Stack Cafe Engine",
-        "Laravel 12",
-        "MySQL Database",
-        "RBAC Security",
-      ],
-      githubUrl: "https://github.com/th3Sisyphus/kameka",
-      coordinates: "MINE_SHAFT_LEVEL_01",
-      stats: { throughput: "120 req/s", security: "AES-256", latency: "<40ms" },
-    },
-  ],
-
-  channels: [
-    {
-      id: "github",
-      tag: "HUB",
-      name: "GitHub Network",
-      address: "github.com/th3Sisyphus",
-      url: "https://github.com/th3Sisyphus",
-    },
-    {
-      id: "linkedin",
-      tag: "LINK",
-      name: "LinkedIn Profile",
-      address: "linkedin.com/in/yehezkieldarren",
-      url: "https://linkedin.com/in/yehezkieldarren",
-    },
-    {
-      id: "email",
-      tag: "MAIL",
-      name: "Direct Transmission",
-      address: "darren.wardoyo@gmail.com",
-      url: "mailto:darren.wardoyo@gmail.com",
-    },
-  ],
+  profile: playerProfile,
+  projects: projectsData,
+  quests: questsData,
+  notes: fieldNotesData,
+  inventory: inventoryData,
+  channels: channelsData,
 };

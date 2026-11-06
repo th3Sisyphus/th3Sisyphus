@@ -4,15 +4,16 @@ import HeroSection from './HeroSection'
 import InventoryVault from './InventoryVault'
 import ProjectsSection from './ProjectsSection'
 import QuestsSection from './QuestsSection'
+import GardenSection from './GardenSection'
 import ContactSection from './ContactSection'
 import Footer from './Footer'
 
 export default function Overlay({ gemCount, onMineBlock, currentBiome, onCycleBiome }) {
-  const [activeSection, setActiveSection] = useState('about')
+  const [activeSection, setActiveSection] = useState('hero')
 
   // Track active section for navigation
   useEffect(() => {
-    const sectionIds = ['about', 'skills', 'projects', 'experience', 'contact']
+    const sectionIds = ['hero', 'projects', 'quests', 'notes', 'vault', 'contact']
     const elements = sectionIds.map((id) => document.getElementById(id)).filter(Boolean)
 
     const observer = new IntersectionObserver(
@@ -42,14 +43,16 @@ export default function Overlay({ gemCount, onMineBlock, currentBiome, onCycleBi
           onCycleBiome={onCycleBiome}
         />
 
-        <InventoryVault />
-
         <ProjectsSection
           currentBiome={currentBiome}
           onCycleBiome={onCycleBiome}
         />
 
         <QuestsSection />
+
+        <GardenSection />
+
+        <InventoryVault />
 
         <ContactSection />
       </main>
